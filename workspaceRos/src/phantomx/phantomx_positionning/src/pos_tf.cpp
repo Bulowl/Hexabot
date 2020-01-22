@@ -49,11 +49,7 @@ void MsgCallback(const sensor_msgs::Imu::ConstPtr& msg)
         ROS_INFO("Positionning Node is running");
 }
 
-<<<<<<< HEAD
-void chatter_callback(const nav_msgs::Odometry &msg)
-=======
 void chatterCallback(const nav_msgs::Odometry &msg)
->>>>>>> added tf for imu
 {
     position = msg.pose.pose.position;
 
@@ -90,14 +86,20 @@ int main(int argc, char **argv)
     ros::Rate loop_rate(5); 
     // Boucle tant que le master existe (ros::ok())
     while (ros::ok()){
-    orientation = ToEulerAngles(orien) ;
+	orientation = ToEulerAngles(orien) ;
 
-    position_pub.publish(position);
-    orientation_pub.publish(orientation);
+	position_pub.publish(position);
+	orientation_pub.publish(orientation);
 
+<<<<<<< HEAD
     ros::spinOnce();
     loop_rate.sleep();
     }
 >>>>>>> added tf for imu
+=======
+	ros::spinOnce();
+	loop_rate.sleep();
+	}
+>>>>>>> changed accordingly to expected fomrat
     return 0;
 }
