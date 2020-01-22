@@ -39,11 +39,7 @@ geometry_msgs::Point to_euler_angles(const geometry_msgs::Quaternion msg)
     return angles;
 }
 
-<<<<<<< HEAD
 void msg_callback(const sensor_msgs::Imu::ConstPtr& msg)
-=======
-void MsgCallback(const sensor_msgs::Imu::ConstPtr& msg)
->>>>>>> added tf for imu
 {
         orien = msg->orientation;
         ROS_INFO("Positionning Node is running");
@@ -62,7 +58,6 @@ int main(int argc, char **argv)
 
     ros::Publisher orientation_pub = n.advertise<geometry_msgs::Point>("/vect_orientation", 1);
     ros::Publisher position_pub = n.advertise<geometry_msgs::Point>("/vect_position", 1);
-<<<<<<< HEAD
 
     ros::Subscriber quat_subscriber = n.subscribe("/phantomx/imu", 1, msg_callback);
     ros::Subscriber sub = n.subscribe("ground_truth/state", 1, chatter_callback);
@@ -78,28 +73,9 @@ int main(int argc, char **argv)
     	ros::spinOnce();
     	loop_rate.sleep();
 	}
-=======
 
-    ros::Subscriber quat_subscriber = n.subscribe("/phantomx/imu", 1, MsgCallback);
-    ros::Subscriber sub = n.subscribe("ground_truth/state", 1, chatterCallback);
-
-    ros::Rate loop_rate(5); 
-    // Boucle tant que le master existe (ros::ok())
-    while (ros::ok()){
-	orientation = ToEulerAngles(orien) ;
-
-	position_pub.publish(position);
-	orientation_pub.publish(orientation);
-
-<<<<<<< HEAD
     ros::spinOnce();
     loop_rate.sleep();
-    }
->>>>>>> added tf for imu
-=======
-	ros::spinOnce();
-	loop_rate.sleep();
-	}
->>>>>>> changed accordingly to expected fomrat
+    
     return 0;
 }
