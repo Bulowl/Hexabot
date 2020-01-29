@@ -19,4 +19,6 @@
 
 
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find phantomx_mapping)/config/configRviz.rviz" />
+
+<node name="record" pkg="rosbag" type="record"  args="record -a -o $(find phantomx_mapping)/rosbag/save  -x '/camera(.*)|/phantomx/j(.*)|/gazebo(.*)|/ground(.*)|/sl(.*)' " />
 </launch>

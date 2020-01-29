@@ -1,5 +1,6 @@
 .idea/
 
+workspaceRos/src/phantomx/phantomx_mapping/rosbag/
 devel/
 logs/
 build/
