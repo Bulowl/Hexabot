@@ -3,7 +3,7 @@
 
 <include file="$(find phantomx_gazebo)/launch/phantomx_gazebo.launch" />
 
-<node name="wall_follower" pkg="phantomx_control" type="wall_follower.py" />
+<node name="bang_controller" pkg="phantomx_control" type="bang_controller.py" />
 <node name="phantomx_positioning" pkg="phantomx_positionning" type="phantomx_positioning" />
 <node name="filtreLidar" pkg="phantomx_mapping" type="filtreLidar.py" />
 
@@ -11,7 +11,7 @@
 
 <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">
     <param name="odom_frame" value="base_stabilized" />
-    <param name="scan_topic" value="/phantomx/scan_filtre"/>
+    <param name="scan_topic" value="/phantomx/scan"/>
     <param name="map_size" value="2000"/>
 </node>
 

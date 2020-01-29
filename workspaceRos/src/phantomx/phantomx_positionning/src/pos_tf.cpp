@@ -42,7 +42,7 @@ geometry_msgs::Point to_euler_angles(const geometry_msgs::Quaternion msg)
 void msg_callback(const sensor_msgs::Imu::ConstPtr& msg)
 {
         orien = msg->orientation;
-        ROS_INFO("Positionning Node is running");
+        ROS_INFO("Positioning Node is running");
 }
 
 void chatter_callback(const nav_msgs::Odometry &msg)
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     ros::Subscriber sub = n.subscribe("ground_truth/state", 1, chatter_callback);
 
     ros::Rate loop_rate(25); 
-    // Boucle tant que le master existe (ros::ok())
+
     while (ros::ok()){
     	orientation = to_euler_angles(orien) ;
         
