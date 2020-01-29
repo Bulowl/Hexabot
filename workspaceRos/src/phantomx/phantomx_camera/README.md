@@ -4,11 +4,11 @@ ROS package providing scripts and files related to image processing of cracks lo
 
 ## test_images
 
-Test images for ttrying out image processing algorithms outside ROS architecture.
+Cracks samples for trying out image processing algorithms outside ROS architecture. Used while the low-level algorithms of the robot were not ready yet. 
 
 ## src
 
-Folder containing the scripts.
+Folder containing the camera-related scripts.
 
 ### visualize_camera
 

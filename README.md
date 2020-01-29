@@ -1,6 +1,6 @@
 # Hexabot
 
-Ceci est un template de dépôt Git pour le cours d'ingénierie système et modélisation robotique de l'UV 5.8 à l'ENSTA Bretagne en 2020.
+Ceci est le dépôt Git pour le cours d'ingénierie système et modélisation robotique de l'UV 5.8 à l'ENSTA Bretagne en 2020.
 
 
 ## Lancer la simulation
@@ -9,20 +9,20 @@ Ceci est un template de dépôt Git pour le cours d'ingénierie système et mod�
 
 - ros-melodic-effort-controllers  # contrôleur  
 - ros-melodic-hector-mapping      # positionnement
-- cv2  (version 3.2.0 tested)     # traitement d'image  
+- cv2  (version 3.2.0 testée)     # traitement d'image  
 - numpy                           # calcul  
 - matplotlib                      # affichage simple  
 - scikit-image                    # traitement d'image  
 
 ### Démarrer la simulation
 
-Pour lancer l'exploration de la grotte, simulation et visualisation incluses:
+Pour lancer l'exploration de la grotte, repérage des failles et visualisation incluses:
 
 ```bash
 roslaunch phantomx_mapping exploration.launch
 ```  
 
-Alternativement, avec une version démo:
+Alternativement, pour une version démo:
 ```bash
 roslaunch phantomx_gazebo phantomx_gazebo.launch
 ```
@@ -45,14 +45,14 @@ Philibert ADAM
 Driss Tayebi  
 
 ### Gestion de projet
+Pour la gestion du projet séance par séance, nous utilisons [taiga](https://tree.taiga.io/project/erysme-hexapode_nom_groupe/)
 
-https://tree.taiga.io/project/erysme-hexapode_nom_groupe/
 
 ## Structure du dépôt
 
 ### Workspace ROS
 
-Le dossier `workspaceRos` est la racine du workspace `catkin` pour les packages ROS. Ces derniers doivent être placés sous `workspaceRos/src`.    
+Le dossier `workspaceRos` est la racine du workspace `catkin` pour les packages ROS. Ces derniers sont placés sous `workspaceRos/src`.    
 Consulter le [README](workspaceRos/README.md) du workspace pour plus d'informations.
 
 
@@ -65,4 +65,4 @@ Le dossier `docs` contient tous les documents utiles au projet:
 
 ### Rapports
 
-Le dossier `reports` doit être rempli avec les rapports d'[objectifs](reports/GoalsTemplate.md) et de [rétrospectives](reports/DebriefTemplate.md) en suivant les deux templates mis à disposition. Ces deux rapports doivent être rédigés respectivement au début et à la fin de chaque sprint.
+Le dossier `reports` contient les rapports d'[objectifs](reports/GoalsTemplate.md) et de [rétrospectives](reports/DebriefTemplate.md) en suivant les deux templates mis à disposition. Ces deux rapports sont rédigés respectivement au début et à la fin de chaque sprint.

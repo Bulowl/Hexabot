@@ -12,4 +12,4 @@ Contains launch file for starting the mission "exploration.launch".
 
 ## src
 
-Contains mapping scripts.
+Folder containing the script that filters tha data coming from the lidar relatively to the attitude of the robot. 
